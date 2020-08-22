@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+.header{
+    background-color: #09b880;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    
+    a{
+        color: white; 
+        text-decoration: none;
+    }  
+
+}
+
+.header_right{
+    color: white;
+    text-decoration: none;
+    margin: auto 0;
+    
+    
+    li{
+        padding: 0 10px;
+        display: inline;
+    }
+    
+
+}
+
+footer{
+    background-color: #09b880;
+    color: white;
+    padding: 10px 0;
+    
+    .footer{
+        text-align: center;
+    }
+}
+
+
+    
