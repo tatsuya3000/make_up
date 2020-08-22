@@ -1,3 +1,6 @@
+$text_color: white;
+$back_color: #09b880;
+
 body{
     display: flex;
     flex-flow: column;
@@ -9,20 +12,20 @@ main{
 }
 
 .header{
-    background-color: #09b880;
+    background-color: $back_color;
     padding: 0 50px;
     display: flex;
     justify-content: space-between;
     
     a{
-        color: white; 
+        color: $text_color; 
         text-decoration: none;
     }  
 
 }
 
 .header_right{
-    color: white;
+    color: $text_color;
     text-decoration: none;
     margin: auto 0;
     
@@ -36,11 +39,22 @@ main{
 }
 
 footer{
-    background-color: #09b880;
-    color: white;
+    background-color: $back_color;
+    color: $text_color;
     padding: 10px 0;
     
-    .footer{
+    
+    ul{
+        text-align: center;
+    }
+        
+    
+    li{
+        padding: 0 10px;
+        display: inline;
+    }
+    
+    .Copyright{
         text-align: center;
     }
 }
