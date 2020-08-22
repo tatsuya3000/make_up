@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MakeUp</title>
+    <title>Make_Up</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,24 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="header">
+      <div class="header_left">
+        <h1><a href="/">Blog</a></h1>
+      </div>
+      <div class="header_right">
+        <ul>
+          <li>お問い合わせ</li>
+        </ul>
+      </div>
+    </header>
+    
+    <main>
+      <%= yield %>
+    </main>
+    
+    <footer>
+      <p class="footer">Copyright Make_Up 2020.</p>
+    </footer>
+    
   </body>
 </html>
