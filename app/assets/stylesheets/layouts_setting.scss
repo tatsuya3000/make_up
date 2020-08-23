@@ -1,18 +1,13 @@
 $text_color: white;
 $back_color: #09b880;
 
-body{
-    display: flex;
-    flex-flow: column;
-    min-height: 100vh;
-}
 
-main{
-    flex: 1;
-}
 
 .header{
+    width: 100%;
+    height: 80px;
     background-color: $back_color;
+    box-sizing: border-box;
     padding: 0 50px;
     display: flex;
     justify-content: space-between;
@@ -38,7 +33,26 @@ main{
 
 }
 
+.main{
+    width: 100%;
+    height: calc(100vh - 160px);
+    overflow: scroll;
+    
+    .main_visual{
+        
+        text-align: center;
+        
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
 footer{
+    width: 100%;
+    height: 80px;
     background-color: $back_color;
     color: $text_color;
     padding: 10px 0;

@@ -1,17 +1,14 @@
-<div class="main_visual">
-    <%= image_tag 'main_visual' %>
-</div>
 
 <div class="main_form">
     <%= form_tag('/products/search', method: :get) do %>
-        <p>教科</p>
+        <p>肌タイプ</p>
         <select name="type1">
-            <option>選択してください</option>
+            <option value='' disabled selected style='display:none;'>選択してください</option>
             <option value="">脂性肌</option>
             <option value="">乾燥肌</option>
             <option value="">混合肌</option>
         </select>
-  
+        
         <input type="submit" value="送信">
     <% end %>
 </div>
