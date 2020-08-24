@@ -1,1 +1,66 @@
-"hello world!"
+
+<div class="main_form">
+    <%= form_tag('/products/search', method: :get) do %>
+        <div class="contents">
+            <div class="content">
+                <p>肌タイプ1</p>
+                <select name="type1">
+                    <option value='' disabled selected style='display:none;'>選択してください</option>
+                    <option value="">脂性肌</option>
+                    <option value="">乾燥肌</option>
+                    <option value="">混合肌</option>
+                </select>
+            </div>
+            <div class="content">
+                <p>肌タイプ2</p>
+                <select name="type1">
+                    <option value='' disabled selected style='display:none;'>選択してください</option>
+                    <option value="">敏感</option>
+                    <option value="">普通</option>
+                </select>
+            </div>
+            <div class="content">
+                <p>好み１</p>
+                <select name="type1">
+                    <option value='' disabled selected style='display:none;'>選択してください</option>
+                    <option value="">ナチュラル</option>
+                    <option value="">しっかり</option>
+                </select>
+            </div>
+            <div class="content">
+                <p>好み2</p>
+                <select name="type1">
+                    <option value='' disabled selected style='display:none;'>選択してください</option>
+                    <option value="">ツヤ</option>
+                    <option value="">マット</option>
+                </select>
+            </div>
+            <div class="content">
+                <p>ラメ</p>
+                <select name="type1">
+                    <option value='' disabled selected style='display:none;'>選択してください</option>
+                    <option value="">有</option>
+                    <option value="">無</option>
+                </select>
+            </div>
+            <div class="content">
+                <p>シーン１</p>
+                <select name="type1">
+                    <option value='' disabled selected style='display:none;'>選択してください</option>
+                    <option value="">オフィス</option>
+                    <option value="">スクール</option>
+                    <option value="">デイリー</option>
+                </select>
+            </div>
+            <div class="content">
+                <p>シーン2</p>
+                <select name="type1">
+                    <option value='' disabled selected style='display:none;'>選択してください</option>
+                    <option value="">季節重視</option>
+                    <option value="">流行重視</option>
+                </select>
+            </div>
+        </div>
+        <input type="submit" value="送信">
+    <% end %>
+</div>

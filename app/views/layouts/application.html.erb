@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Make_Up</title>
+    <title>Yurui</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,21 +12,37 @@
   <body>
     <header class="header">
       <div class="header_left">
-        <h1><a href="/">Blog</a></h1>
+        <h1><a class="title" href="/">Yurui</a></h1>
       </div>
       <div class="header_right">
         <ul>
           <li>お問い合わせ</li>
+          <li>インスタ</li>
+          <li>ツイッター</li>
+          <li>ブログ</li>
         </ul>
       </div>
     </header>
     
-    <main>
+    <main class="main">
+      <div class="main_visual">
+        <%= image_tag 'main_visual' %>
+      </div>
       <%= yield %>
     </main>
     
     <footer>
-      <p class="footer">Copyright Make_Up 2020.</p>
+      <div class="footer_navi">
+        <ul>
+          <li>お問い合わせ</li>
+          <li>インスタ</li>
+          <li>ツイッター</li>
+          <li>ブログ</li>
+        </ul>
+      </div>
+      <div class="Copyright">
+        <p>Copyright Yurui 2020.</p>
+      </div>
     </footer>
     
   </body>
