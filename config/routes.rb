@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   
   root "tops#index"
   
-  resources :products, only: :show
+  resources :products, only: [:index, :show]
  
 end
