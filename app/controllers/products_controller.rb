@@ -9,8 +9,8 @@ class ProductsController < ApplicationController
     end
     
     def search
-        @products1 = Product.where("type1", "%#{params[:type1]}%")
-        @products2 = Product.where("taste1", "%#{params[:taste1]}%")
+        @foundation = Product.where("type1", "%#{params[:type1]}%")
+        @eye_ = Product.where("taste1", "%#{params[:taste1]}%")
     end
     
     private
