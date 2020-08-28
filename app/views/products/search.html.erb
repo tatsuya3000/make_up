@@ -1,0 +1,7 @@
+<% @lips.each do |lip| %>
+    <div class="lip">
+        <h3><%= lip.name %></h3>
+        <div><%= image_tag(lip.image_url) %></div>
+        <%= link_to "詳細", "/products/#{product.id}", class: "btn", method: :get %>
+    </div>
+<% end %>
