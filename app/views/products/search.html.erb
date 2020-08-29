@@ -1,3 +1,28 @@
+<h2>あなたにオススメのファンデーション</h2>
+<% @foundations.each do |foundation| %>
+    <div class="foundation">
+        <h3><%= foundation.name %></h3>
+        <div><%= image_tag(foundation.image_url) %></div>
+        <%= link_to "詳細", "/products/#{foundation.id}", class: "btn", method: :get %>
+    </div>
+<% end %>
+<h2>あなたにオススメのアイメイク</h2>
+<% @eye_makes.each do |eye_make| %>
+    <div class="eye_make">
+        <h3><%= eye_make.name %></h3>
+        <div><%= image_tag(eye_make.image_url) %></div>
+        <%= link_to "詳細", "/products/#{eye_make.id}", class: "btn", method: :get %>
+    </div>
+<% end %>
+<h2>あなたにオススメのチーク</h2>
+<% @cheeks.each do |cheek| %>
+    <div class="cheek">
+        <h3><%= cheek.name %></h3>
+        <div><%= image_tag(cheek.image_url) %></div>
+        <%= link_to "詳細", "/products/#{cheek.id}", class: "btn", method: :get %>
+    </div>
+<% end %>
+<h2>あなたにオススメのリップ</h2>
 <% @lips.each do |lip| %>
     <div class="lip">
         <h3><%= lip.name %></h3>
