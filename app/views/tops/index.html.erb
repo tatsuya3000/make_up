@@ -1,6 +1,6 @@
 
 <div class="main_form">
-    <%= form_tag('/products/search', method: :get) do %>
+    <%= form_tag("/products/search", method: :get) do %>
         <div class="contents">
             <div class="content">
                 <p>肌タイプ1</p>
@@ -21,11 +21,7 @@
             </div>
             <div class="content">
                 <p>好み１</p>
-                <select name="taste1">
-                    <option value='' disabled selected style='display:none;'>選択してください</option>
-                    <option value="">ナチュラル</option>
-                    <option value="">しっかり</option>
-                </select>
+                <%= select_tag 'taste1', options_for_select([['---選択してください---', ''], ["ナチュラル"], ["しっかり"]]) %>
             </div>
             <div class="content">
                 <p>好み2</p>
