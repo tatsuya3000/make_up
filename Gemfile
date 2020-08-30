@@ -66,3 +66,5 @@ gem 'devise'
 gem 'hirb'
 gem 'hirb-unicode'
 gem 'kaminari'
+gem 'cancancan'
+
