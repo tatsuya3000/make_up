@@ -67,4 +67,5 @@ gem 'hirb'
 gem 'hirb-unicode'
 gem 'kaminari'
 gem 'cancancan'
-
+gem 'rails_admin', '~> 2.0.0.beta'
+gem 'dotenv-rails'
