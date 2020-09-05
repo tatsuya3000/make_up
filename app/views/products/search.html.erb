@@ -2,7 +2,7 @@
 <% @foundations.each do |foundation| %>
     <div class="foundation">
         <h3><%= foundation.name %></h3>
-        <div><%= image_tag(foundation.image_url) %></div>
+        <div><%= image_tag(foundation.image) %></div>
         <%= link_to "詳細", "/products/#{foundation.id}", class: "btn", method: :get %>
     </div>
 <% end %>
@@ -10,7 +10,7 @@
 <% @eye_makes.each do |eye_make| %>
     <div class="eye_make">
         <h3><%= eye_make.name %></h3>
-        <div><%= image_tag(eye_make.image_url) %></div>
+        <div><%= image_tag(eye_make.image) %></div>
         <%= link_to "詳細", "/products/#{eye_make.id}", class: "btn", method: :get %>
     </div>
 <% end %>
@@ -18,7 +18,7 @@
 <% @cheeks.each do |cheek| %>
     <div class="cheek">
         <h3><%= cheek.name %></h3>
-        <div><%= image_tag(cheek.image_url) %></div>
+        <div><%= image_tag(cheek.image) %></div>
         <%= link_to "詳細", "/products/#{cheek.id}", class: "btn", method: :get %>
     </div>
 <% end %>
@@ -26,7 +26,7 @@
 <% @lips.each do |lip| %>
     <div class="lip">
         <h3><%= lip.name %></h3>
-        <div><%= image_tag(lip.image_url) %></div>
+        <div><%= image_tag(lip.image) %></div>
         <%= link_to "詳細", "/products/#{lip.id}", class: "btn", method: :get %>
     </div>
 <% end %>

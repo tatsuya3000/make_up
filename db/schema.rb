@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_30_063709) do
+ActiveRecord::Schema.define(version: 2020_09_05_211937) do
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.text "image_url"
+    t.text "image"
     t.text "feature"
     t.text "method"
     t.string "type1"
