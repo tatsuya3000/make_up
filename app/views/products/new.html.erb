@@ -1,0 +1,8 @@
+<div class="container">
+    <%= form_for @product do |f| %>
+        <h3>投稿する</h3>
+        <!--<%= f.label :image %>-->
+        <%= f.file_field :image %>
+        <%= f.submit "送信" %>
+    <% end %>
+</div>
