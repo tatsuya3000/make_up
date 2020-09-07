@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root "tops#index"
   
   resources :users, only: :show
-  resources :products, only: [:index, :show] do
+  resources :products do
     collection do
       get 'search'
     end
