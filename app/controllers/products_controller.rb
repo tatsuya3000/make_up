@@ -15,9 +15,19 @@ class ProductsController < ApplicationController
         @lips = Product.where(type1: "", type2: "",taste1: params[:taste1], taste2: params[:taste2], glitter: params[:glitter], scene1: params[:scene1], scene2: params[:scene2], category: "lip")
     end
     
+    def new
+        @product = Product.new
+    end
+    
+      def create
+        Product.create(image: product_params[:image])
+        # トップページにリダイレクトする
+        # redirect_to controller: :tops,  action: :index
+      end
+    
     private
-    def produdt_params
-        params.permit(:name, :image_url, :feature, :method)
+    def product_params
+        params.require(:product).permit(:name, :image, :feature, :method)
     end
     
 end
