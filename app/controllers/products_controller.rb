@@ -19,11 +19,11 @@ class ProductsController < ApplicationController
         @product = Product.new
     end
     
-      def create
-        Product.create(image: product_params[:image])
+    def create
+        Product.create(product_params)
         # トップページにリダイレクトする
         # redirect_to controller: :tops,  action: :index
-      end
+    end
     
     private
     def product_params
