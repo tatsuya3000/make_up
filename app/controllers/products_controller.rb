@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
     end
     
     def create
+       
         Product.create(product_params)
         # トップページにリダイレクトする
         # redirect_to controller: :tops,  action: :index
@@ -27,7 +28,7 @@ class ProductsController < ApplicationController
     
     private
     def product_params
-        params.require(:product).permit(:name, :image, :feature, :method)
+        params.require(:product).permit(:name, :image, :feature, :method).merge(user_id: current_user.id)
     end
     
 end
