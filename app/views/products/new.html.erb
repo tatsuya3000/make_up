@@ -2,7 +2,7 @@
     <%= form_for @product do |f| %>
         <h3>投稿する</h3>
         <%= f.text_field :name %>
-        <!--<%= f.label :image %>-->
+        <%= f.label :image, "化粧品写真" %>
         <%= f.file_field :image %>
         <%= f.text_area	 :feature %>
         <%= f.text_area	 :method %>
