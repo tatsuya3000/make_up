@@ -1,6 +1,6 @@
 <div class="product">
     <h3><%= @products.name %>の詳細</h3>
-    <div><%= image_tag(@products.image) %></div>
+    <div><%= image_tag(@products.image.thumb.url) %></div>
     <p><%= @products.feature %></p>
     <p><%= @products.method %></p>
 </div>
