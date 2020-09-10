@@ -1,19 +1,30 @@
 <div class="container">
     <%= form_for @product do |f| %>
         <h3>投稿する</h3>
-        <%= f.text_field :name %>
-        <%= f.label :image, "化粧品写真" %>
-        <%= f.file_field :image %>
-        <%= f.text_area	 :feature %>
-        <%= f.text_area	 :method %>
-        <%= f.select :category, [["ファンデーション", "foundation"], ["アイメイク", "eye_make"], ["チーク", "cheek"], ["リップ", "lip"]], include_blank: "選択して下さい" %>
-        <%= f.select :type1, [["脂性肌", "脂性肌"], ["乾燥肌", "乾燥肌"], ["混合肌", "混合肌"], ["未入力", ""]], include_blank: "選択して下さい" %>
-        <%= f.select :type2, [["普通", "普通"], ["敏感", "敏感"], ["未入力", ""]], include_blank: "選択して下さい" %>
-        <%= f.select :taste1, [["ナチュラル", "ナチュラル"], ["しっかり", "しっかり"], ["未入力", ""]], include_blank: "選択して下さい" %>
-        <%= f.select :taste2, [["ツヤ", "ツヤ"], ["マット", "マット"], ["未入力", ""]], include_blank: "選択して下さい" %>
-        <%= f.select :glitter, [["有", "有"], ["無", "無"], ["未入力", ""]], include_blank: "選択して下さい" %>
-        <%= f.select :scene1, [["オフィス", "オフィス"], ["スクール", "スクール"], ["デイリー", "デイリー"], ["未入力", ""]], include_blank: "選択して下さい" %>
-        <%= f.select :scene2, [["季節重視", "季節重視"], ["流行重視", "流行重視"], ["未入力", ""]], include_blank: "選択して下さい" %>
+        <%= f.label :name, "化粧品名前：　" %>
+        <%= f.text_field :name %><br>
+        <%= f.label :image, "化粧品写真：　" %>
+        <%= f.file_field :image %><br>
+        <%= f.label :feature, "化粧品特徴：　" %>
+        <%= f.text_area	 :feature %><br>
+        <%= f.label :method, "化粧品使い方：" %>
+        <%= f.text_area	 :method %><br>
+        <%= f.label :category, "カテゴリー：　" %>
+        <%= f.select :category, [["ファンデーション", "foundation"], ["アイメイク", "eye_make"], ["チーク", "cheek"], ["リップ", "lip"]], include_blank: "選択して下さい" %><br>
+        <%= f.label :type1, "肌タイプ１：　" %>
+        <%= f.select :type1, [["脂性肌", "脂性肌"], ["乾燥肌", "乾燥肌"], ["混合肌", "混合肌"], ["未入力", ""]], include_blank: "選択して下さい" %><br>
+        <%= f.label :type2, "肌タイプ２：　" %>
+        <%= f.select :type2, [["普通", "普通"], ["敏感", "敏感"], ["未入力", ""]], include_blank: "選択して下さい" %><br>
+        <%= f.label :taste1, "好み１：　　　" %>
+        <%= f.select :taste1, [["ナチュラル", "ナチュラル"], ["しっかり", "しっかり"], ["未入力", ""]], include_blank: "選択して下さい" %><br>
+        <%= f.label :taste2, "好み２：　　　" %>
+        <%= f.select :taste2, [["ツヤ", "ツヤ"], ["マット", "マット"], ["未入力", ""]], include_blank: "選択して下さい" %><br>
+        <%= f.label :glitter, "ラメ：　　　　" %>
+        <%= f.select :glitter, [["有", "有"], ["無", "無"], ["未入力", ""]], include_blank: "選択して下さい" %><br>
+        <%= f.label :scene1, "シーン１：　　" %>
+        <%= f.select :scene1, [["オフィス", "オフィス"], ["スクール", "スクール"], ["デイリー", "デイリー"], ["未入力", ""]], include_blank: "選択して下さい" %><br>
+        <%= f.label :scene2, "シーン２：　　" %>
+        <%= f.select :scene2, [["季節重視", "季節重視"], ["流行重視", "流行重視"], ["未入力", ""]], include_blank: "選択して下さい" %><br>
         <%= f.submit "送信" %>
     <% end %>
 </div>
