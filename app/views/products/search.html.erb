@@ -2,7 +2,13 @@
 <% @foundations.each do |foundation| %>
     <div class="foundation">
         <h3><%= foundation.name %></h3>
-        <div><%= image_tag(foundation.image) %></div>
+        <div>
+        <% if foundation.image? %>
+            <%= image_tag(foundation.image.thumb.url) %>
+        <% else %>
+            <p>画像無</p>
+        <% end %>
+        </div>
         <%= link_to "詳細", "/products/#{foundation.id}", class: "btn", method: :get %>
     </div>
 <% end %>
@@ -10,7 +16,13 @@
 <% @eye_makes.each do |eye_make| %>
     <div class="eye_make">
         <h3><%= eye_make.name %></h3>
-        <div><%= image_tag(eye_make.image) %></div>
+        <div>
+        <% if eye_make.image? %>
+            <%= image_tag(eye_make.image.thumb.url) %>
+        <% else %>
+            <p>画像無</p>
+        <% end %>
+        </div>
         <%= link_to "詳細", "/products/#{eye_make.id}", class: "btn", method: :get %>
     </div>
 <% end %>
@@ -18,7 +30,13 @@
 <% @cheeks.each do |cheek| %>
     <div class="cheek">
         <h3><%= cheek.name %></h3>
-        <div><%= image_tag(cheek.image) %></div>
+        <div>
+        <% if cheek.image? %>
+            <%= image_tag(cheek.image.thumb.url) %>
+        <% else %>
+            <p>画像無</p>
+        <% end %>
+        </div>
         <%= link_to "詳細", "/products/#{cheek.id}", class: "btn", method: :get %>
     </div>
 <% end %>
@@ -26,7 +44,13 @@
 <% @lips.each do |lip| %>
     <div class="lip">
         <h3><%= lip.name %></h3>
-        <div><%= image_tag(lip.image) %></div>
+        <div>
+        <% if lip.image? %>
+            <%= image_tag(lip.image.thumb.url) %>
+        <% else %>
+            <p>画像無</p>
+        <% end %>
+        </div>
         <%= link_to "詳細", "/products/#{lip.id}", class: "btn", method: :get %>
     </div>
 <% end %>
