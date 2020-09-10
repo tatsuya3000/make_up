@@ -1,5 +1,5 @@
 <div class="product">
-    <h3><%= @products.name %>の詳細</h3>
+    <h2><%= @products.name %>の詳細</h2>
     <div>
     <% if @products.image? %>
         <%= image_tag(@products.image.thumb.url) %>
