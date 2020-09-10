@@ -3,7 +3,13 @@
     <% @products.each do |product| %>
         <div class="products">
             <h3><%= product.name %></h3>
-            <div><%= image_tag(product.image.thumb.url) %></div>
+            <div>
+            <% if product.image? %>
+              <%= image_tag product.image.thumb.url %>
+            <% else %>
+              <p>画像無</p>
+            <% end %>
+            </div>
             <%= link_to "詳細", "/products/#{product.id}", class: "btn", method: :get %>
         </div>
     <% end %>
