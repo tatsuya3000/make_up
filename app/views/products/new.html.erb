@@ -6,6 +6,14 @@
         <%= f.file_field :image %>
         <%= f.text_area	 :feature %>
         <%= f.text_area	 :method %>
+        <%= f.select :category, [["ファンデーション", "foundation"], ["アイメイク", "eye_make"], ["チーク", "cheek"], ["リップ", "lip"]], include_blank: "選択して下さい" %>
+        <%= f.select :type1, [["脂性肌", "脂性肌"], ["乾燥肌", "乾燥肌"], ["混合肌", "混合肌"], ["未入力", ""]], include_blank: "選択して下さい" %>
+        <%= f.select :type2, [["普通", "普通"], ["敏感", "敏感"], ["未入力", ""]], include_blank: "選択して下さい" %>
+        <%= f.select :taste1, [["ナチュラル", "ナチュラル"], ["しっかり", "しっかり"], ["未入力", ""]], include_blank: "選択して下さい" %>
+        <%= f.select :taste2, [["ツヤ", "ツヤ"], ["マット", "マット"], ["未入力", ""]], include_blank: "選択して下さい" %>
+        <%= f.select :glitter, [["有", "有"], ["無", "無"], ["未入力", ""]], include_blank: "選択して下さい" %>
+        <%= f.select :scene1, [["オフィス", "オフィス"], ["スクール", "スクール"], ["デイリー", "デイリー"], ["未入力", ""]], include_blank: "選択して下さい" %>
+        <%= f.select :scene2, [["季節重視", "季節重視"], ["流行重視", "流行重視"], ["未入力", ""]], include_blank: "選択して下さい" %>
         <%= f.submit "送信" %>
     <% end %>
 </div>
