@@ -4,31 +4,31 @@
         <div class="contents">
             <div class="content">
                 <p>肌タイプ1</p>
-                <%= select_tag 'type1', options_for_select([['---選択してください---', ''], ["脂性肌"], ["乾燥肌"], ["混合肌"]]) %>
+                <%= select_tag 'type1', options_for_select([["脂性肌"], ["乾燥肌"], ["混合肌"]]) %>
             </div>
             <div class="content">
                 <p>肌タイプ2</p>
-                <%= select_tag 'type2', options_for_select([['---選択してください---', ''], ["普通"], ["敏感"]]) %>
+                <%= select_tag 'type2', options_for_select([["普通"], ["敏感"]]) %>
             </div>
             <div class="content">
                 <p>好み１</p>
-                <%= select_tag 'taste1', options_for_select([['---選択してください---', ''], ["ナチュラル"], ["しっかり"]]) %>
+                <%= select_tag 'taste1', options_for_select([["ナチュラル"], ["しっかり"]]) %>
             </div>
             <div class="content">
                 <p>好み2</p>
-                <%= select_tag 'taste2', options_for_select([['---選択してください---', ''], ["ツヤ"], ["マット"]]) %>
+                <%= select_tag 'taste2', options_for_select([["ツヤ"], ["マット"]]) %>
             </div>
             <div class="content">
                 <p>ラメ</p>
-                <%= select_tag 'glitter', options_for_select([['---選択してください---', ''], ["有"], ["無"]]) %>
+                <%= select_tag 'glitter', options_for_select([["有"], ["無"]]) %>
             </div>
             <div class="content">
                 <p>シーン１</p>
-                <%= select_tag 'scene1', options_for_select([['---選択してください---', ''], ["オフィス"], ["スクール"], ["デイリー"]]) %>
+                <%= select_tag 'scene1', options_for_select([["オフィス"], ["スクール"], ["デイリー"]]) %>
             </div>
             <div class="content">
                 <p>シーン2</p>
-                <%= select_tag 'scene2', options_for_select([['---選択してください---', ''], ["季節重視"], ["流行重視"]]) %>
+                <%= select_tag 'scene2', options_for_select([["季節重視"], ["流行重視"]]) %>
             </div>
         </div>
         <input type="submit" value="送信">
