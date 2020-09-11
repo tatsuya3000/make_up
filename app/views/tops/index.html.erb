@@ -34,4 +34,13 @@
         <input type="submit" value="送信">
     <% end %>
 </div>
-<h3><%= link_to "ゆきのオススメ化粧品一覧", "/products" %></h3>
+<% if user_signed_in? %>
+    <h3><%= link_to "ゆきのオススメ化粧品一覧", "/products" %></h3>
+<% else %>
+    <h3>新規登録し、ログインすると</h3>
+    <ul>
+        <li>ゆきのオススメ化粧品一覧が見れる</li>
+        <li>メイクアドバイスが見れる</li>
+    </ul>
+    <p><%= link_to "新規登録", new_user_registration_path  %></p>
+<% end %>
