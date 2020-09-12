@@ -1,0 +1,11 @@
+<div class="cosmetic">
+    <h2><%= @cosmetics.name %>の詳細</h2>
+    <div>
+    <% if @cosmetics.image? %>
+        <%= image_tag(@cosmetics.image.thumb.url) %>
+    <% else %>
+        <p>画像無</p>
+    <% end %>
+    </div>
+    <p><%= @cosmetics.review %></p>
+</div>
