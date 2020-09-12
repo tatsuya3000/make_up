@@ -5,7 +5,8 @@ class Ability
 
   def initialize(user)
     
-    can :manage, :session
+    can :create, :session
+    can :destroy, :session
     can :create, :registration
     
     user ||= User.new
@@ -15,7 +16,7 @@ class Ability
       can :access, :rails_admin
     else
       can :read, :all
-      can :search, :all
+      can :search, :product
     end
     
     # Define abilities for the passed in user here. For example:
