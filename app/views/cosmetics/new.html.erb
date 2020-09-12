@@ -1,0 +1,14 @@
+<h2>My Cosmetics 投稿フォーム</h2>
+<div class="container2">
+    <%= form_for @cosmetic do |f| %>
+        <%= f.label :name, "化粧品名前：　" %>
+        <%= f.text_field :name %><br>
+        <%= f.label :image, "化粧品写真：　" %>
+        <%= f.file_field :image %><br> 
+        <%= f.label :category, "カテゴリー：　" %>
+        <%= f.select :category, [["ファンデーション", "foundation"], ["アイメイク", "eye_make"], ["チーク", "cheek"], ["リップ", "lip"]], {include_blank: "選択して下さい"}, { class: 'form-control' , required: true } %><br>
+        <%= f.label :review, "感想：" %>
+        <%= f.text_area	 :review %><br>
+        <%= f.submit "送信" %>
+    <% end %>
+</div>
