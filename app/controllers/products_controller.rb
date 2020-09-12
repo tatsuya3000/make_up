@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
     
+    before_action :move_to_index, except: [:search]
+    
     def index
         @products = Product.all
     end
@@ -29,6 +31,10 @@ class ProductsController < ApplicationController
     private
     def product_params
         params.require(:product).permit(:name, :image, :feature, :method, :type1, :type2, :taste1, :taste2, :glitter, :scene1, :scene2, :category).merge(user_id: current_user.id)
+    end
+    
+    def move_to_index
+        redirect_to root_path unless user_signed_in?
     end
     
 end
