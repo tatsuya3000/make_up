@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
     before_action :move_to_index, except: [:search]
     
     def index
-        @products = Product.all
+        @products = Product.all.order("created_at DESC").page(params[:page]).per(5)
     end
     
     def show

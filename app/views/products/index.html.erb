@@ -13,4 +13,5 @@
             <%= link_to "詳細", "/products/#{product.id}", class: "btn", method: :get %>
         </div>
     <% end %>
+    <%= paginate(@products) %>
 </div>
