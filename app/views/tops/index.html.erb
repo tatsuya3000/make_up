@@ -1,66 +1,47 @@
 
 <div class="main_form">
-    <%= form_tag('/products/search', method: :get) do %>
+    <%= form_tag("/products/search", method: :get) do %>
         <div class="contents">
             <div class="content">
                 <p>肌タイプ1</p>
-                <select name="type1">
-                    <option value='' disabled selected style='display:none;'>選択してください</option>
-                    <option value="">脂性肌</option>
-                    <option value="">乾燥肌</option>
-                    <option value="">混合肌</option>
-                </select>
+                <%= select_tag 'type1', options_for_select([["脂性肌"], ["乾燥肌"], ["混合肌"]]) %>
             </div>
             <div class="content">
                 <p>肌タイプ2</p>
-                <select name="type1">
-                    <option value='' disabled selected style='display:none;'>選択してください</option>
-                    <option value="">敏感</option>
-                    <option value="">普通</option>
-                </select>
+                <%= select_tag 'type2', options_for_select([["普通"], ["敏感"]]) %>
             </div>
             <div class="content">
                 <p>好み１</p>
-                <select name="type1">
-                    <option value='' disabled selected style='display:none;'>選択してください</option>
-                    <option value="">ナチュラル</option>
-                    <option value="">しっかり</option>
-                </select>
+                <%= select_tag 'taste1', options_for_select([["ナチュラル"], ["しっかり"]]) %>
             </div>
             <div class="content">
                 <p>好み2</p>
-                <select name="type1">
-                    <option value='' disabled selected style='display:none;'>選択してください</option>
-                    <option value="">ツヤ</option>
-                    <option value="">マット</option>
-                </select>
+                <%= select_tag 'taste2', options_for_select([["ツヤ"], ["マット"]]) %>
             </div>
             <div class="content">
                 <p>ラメ</p>
-                <select name="type1">
-                    <option value='' disabled selected style='display:none;'>選択してください</option>
-                    <option value="">有</option>
-                    <option value="">無</option>
-                </select>
+                <%= select_tag 'glitter', options_for_select([["有"], ["無"]]) %>
             </div>
             <div class="content">
                 <p>シーン１</p>
-                <select name="type1">
-                    <option value='' disabled selected style='display:none;'>選択してください</option>
-                    <option value="">オフィス</option>
-                    <option value="">スクール</option>
-                    <option value="">デイリー</option>
-                </select>
+                <%= select_tag 'scene1', options_for_select([["オフィス"], ["スクール"], ["デイリー"]]) %>
             </div>
             <div class="content">
                 <p>シーン2</p>
-                <select name="type1">
-                    <option value='' disabled selected style='display:none;'>選択してください</option>
-                    <option value="">季節重視</option>
-                    <option value="">流行重視</option>
-                </select>
+                <%= select_tag 'scene2', options_for_select([["季節重視"], ["流行重視"]]) %>
             </div>
         </div>
         <input type="submit" value="送信">
     <% end %>
 </div>
+<% if user_signed_in? %>
+    <p><%= link_to "ゆきのオススメ化粧品一覧", "/products" %></p>
+    <p><%= link_to "ユーザー投稿化粧品一覧", "/cosmetics" %></p>
+<% else %>
+    <h3>新規登録し、ログインすると</h3>
+    <ul>
+        <li>ゆきのオススメ化粧品一覧が見れる</li>
+        <li>メイクアドバイスが見れる</li>
+    </ul>
+    <p><%= link_to "新規登録", new_user_registration_path  %></p>
+<% end %>

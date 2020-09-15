@@ -1,0 +1,12 @@
+<div class="product">
+    <h2><%= @products.name %>の詳細</h2>
+    <div>
+    <% if @products.image? %>
+        <%= image_tag(@products.image.thumb.url) %>
+    <% else %>
+        <p>画像無</p>
+    <% end %>
+    </div>
+    <p><%= @products.feature %></p>
+    <p><%= @products.method %></p>
+</div>

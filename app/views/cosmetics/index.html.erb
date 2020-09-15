@@ -1,0 +1,17 @@
+<h2>ユーザー投稿化粧品一覧</h2>
+<div class="block">
+    <% @cosmetics.each do |cosmetic| %>
+        <div class="cosmetics">
+            <h3><%= cosmetic.name %></h3>
+            <div>
+            <% if cosmetic.image? %>
+              <%= image_tag cosmetic.image.thumb.url %>
+            <% else %>
+              <p>画像無</p>
+            <% end %>
+            </div>
+            <%= link_to "詳細", "/cosmetics/#{cosmetic.id}", class: "btn", method: :get %>
+        </div>
+    <% end %>
+    <%= paginate(@cosmetics) %>
+</div>
